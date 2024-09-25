@@ -13,7 +13,7 @@ namespace ArmstrongNumber
         {
             static void Main(string[] args)
             {
-            int num , choice;
+            int number , choice;
             bool exit = false;
 
             while (!exit)
@@ -23,15 +23,15 @@ namespace ArmstrongNumber
 
                 while (true)
                 {
-                    num = int.Parse(Console.ReadLine());
-                    if (num >= 0)
+                    number = int.Parse(Console.ReadLine());
+                    if (number >= 0)
                     {
                         break;
                     }
                     Console.WriteLine("Please enter a valid positive number:");
                 }
 
-                string result = Armstrong.IsArmstrong(num) ? "Armstrong Number" : "Not an Armstrong Number";
+                string result = Armstrong.IsArmstrong(number) ? "Armstrong Number" : "Not an Armstrong Number";
                 Console.WriteLine(result);
 
                 Console.WriteLine("\nChoose an option:");

@@ -8,16 +8,16 @@ namespace ArmstrongNumber.model
 {
     internal class Armstrong
     {
-        public static bool IsArmstrong(int num)
+        public static bool IsArmstrong(int number)
         {
-            int sum = 0, temp = num, rem;
-            int digits = num.ToString().Length;
+            int sum = 0, temp = number, remainder;
+            int digits = number.ToString().Length;
 
-            while (num > 0)
+            while (number > 0)
             {
-                rem = num % 10;
-                sum = sum + (int)Math.Pow(rem, digits);
-                num = num + 10;
+                remainder = number % 10;
+                sum = sum + (int)Math.Pow(remainder, digits);
+                number = number / 10;
             }
 
             return temp == sum;
